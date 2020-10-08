@@ -46,7 +46,11 @@ jobs:
     - name: "Code linter"
       script: make lint || true
     - name: "Code linter"
+      dist: focal
+      sudo: required
+      group: edge
       arch: arm64-graviton2
+      virt: vm
       script: make lint || true
     - name: "Unit tests"
       before_script:
