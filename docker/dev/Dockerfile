@@ -1,11 +1,11 @@
 ARG VPP_IMG
 FROM ${VPP_IMG} AS vppimg
 
-RUN dpkg-query -f '${Version}' -W vpp > /vpp/version
+RUN  uname -a && dpkg-query -f '${Version}' -W vpp > /vpp/version
 
 FROM golang:1.15 AS verify-binapi
 
-RUN uname -a && apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y --no-install-recommends \
 		patch \
  	&& rm -rf /var/lib/apt/lists/*
 
