@@ -5,6 +5,10 @@ RUN  uname -a && dpkg-query -f '${Version}' -W vpp > /vpp/version
 
 FROM golang:1.15 AS verify-binapi
 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+		patch \
+ 	&& rm -rf /var/lib/apt/lists/*
+
 WORKDIR /src/ligato/vpp-agent
 
 ARG VPP_IMG
