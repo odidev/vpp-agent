@@ -42,7 +42,7 @@ include vpp.env
 ifeq ($(VPP_VERSION),)
 VPP_VERSION=$(VPP_DEFAULT)
 endif
-
+$(info $$var is [${UNAME_ARCH}])
 VPP_IMG?=$(value VPP_$(VPP_VERSION)_IMAGE)
 ifeq ($(UNAME_ARCH), aarch64)
 VPP_IMG:=$(subst vpp-base,vpp-base-arm64,$(VPP_IMG))
