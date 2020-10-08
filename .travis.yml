@@ -38,7 +38,11 @@ jobs:
         - make cmd
         - make examples
     - stage: Build&Test
+      dist: focal
+      sudo: required
+      group: edge
       arch: arm64-graviton2
+      virt: vm
       name: "Build"
       script:
         - make cmd
@@ -60,7 +64,11 @@ jobs:
         - goveralls -coverprofile=/tmp/coverage.out -service=travis-ci
         - bash <(curl -s https://codecov.io/bash) -f /tmp/coverage.out -F unittests
     - name: "Unit tests"
+      dist: focal
+      sudo: required
+      group: edge
       arch: arm64-graviton2
+      virt: vm
       before_script:
         - go get github.com/mattn/goveralls
       script: make test-cover
@@ -74,7 +82,11 @@ jobs:
         - make verify-binapi
         - make integration-tests
     - env: VPP_VERSION=1908
+      dist: focal
+      sudo: required
+      group: edge
       arch: arm64-graviton2
+      virt: vm
       script:
         - make verify-binapi
         - make integration-tests
@@ -98,7 +110,11 @@ jobs:
       after_success:
         - bash <(curl -s https://codecov.io/bash) -f /tmp/e2e-cov.out -F e2e
     - env: VPP_VERSION=1908
+      dist: focal
+      sudo: required
+      group: edge
       arch: arm64-graviton2
+      virt: vm
       script:
         - make e2e-tests-cover
       after_success:
