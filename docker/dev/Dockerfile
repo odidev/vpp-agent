@@ -5,7 +5,7 @@ RUN dpkg-query -f '${Version}' -W vpp > /vpp/version
 
 FROM golang:1.15 AS verify-binapi
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
 		patch \
  	&& rm -rf /var/lib/apt/lists/*
 
