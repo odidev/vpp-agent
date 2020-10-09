@@ -2,8 +2,8 @@
 set -eu
 
 # compile test
-sudo apt-get install libc6-dev
-sudo apt-get install libc6-arm64-cross
+wget http://launchpadlibrarian.net/412288514/libc6-dev_2.29-0ubuntu1_arm64.deb
+sudo apt install libc6-dev_2.29-0ubuntu1_arm64.deb
 ls /lib/aarch64-linux-gnu/
 go test -c ./tests/integration/vpp -o ./tests/integration/vpp/vpp-integration.test
 
