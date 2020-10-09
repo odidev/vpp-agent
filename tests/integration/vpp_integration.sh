@@ -2,6 +2,8 @@
 set -eu
 
 # compile test
+sudo apt-get install libc6-dev
+sudo apt-get install libc6-arm64-cross
 go test -c ./tests/integration/vpp -o ./tests/integration/vpp/vpp-integration.test
 
 # start vpp image
