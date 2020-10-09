@@ -3,7 +3,7 @@ FROM ${VPP_IMG} AS vppimg
 
 RUN  uname -a && dpkg-query -f '${Version}' -W vpp > /vpp/version
 
-FROM golang:1.15 AS verify-binapi
+FROM arm64v8/golang:1.15 AS verify-binapi
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		patch \
