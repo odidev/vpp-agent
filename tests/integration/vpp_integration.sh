@@ -3,6 +3,7 @@ set -eu
 
 # compile test
 pwd
+sudo apt-get install libc6-dev
 wget http://launchpadlibrarian.net/412288514/libc6-dev_2.29-0ubuntu1_arm64.deb
 sudo apt install /home/travis/gopath/src/go.ligato.io/vpp-agent/v3/libc6-dev_2.29-0ubuntu1_arm64.deb
 ls /lib/aarch64-linux-gnu/
