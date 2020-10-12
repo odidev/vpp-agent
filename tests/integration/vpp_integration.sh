@@ -3,9 +3,12 @@ set -eu
 
 # compile test
 pwd
-wget https://launchpad.net/~ci-train-ppa-service/+archive/ubuntu/4019-deletedppa/+build/19162388/+files/libc6-dev_2.31-0ubuntu9_arm64.deb
-sudo dpkg -i /home/travis/gopath/src/go.ligato.io/vpp-agent/v3/libc6-dev_2.31-0ubuntu9_arm64.deb
-sudo apt-get install -f
+wget https://ftp.gnu.org/gnu/glibc/glibc-2.29.tar.gz
+sudo tar -xvf glibc-2.29.tar.gz
+cd glibc
+./configure
+make
+make install
 ls /lib/aarch64-linux-gnu/
 go test -c ./tests/integration/vpp -o ./tests/integration/vpp/vpp-integration.test
 
