@@ -8,8 +8,6 @@ ls
 ls
 cd glibc-2.29
 ls
-ls
-sudo ./configure
 sudo make
 sudo make install
 cd ..
