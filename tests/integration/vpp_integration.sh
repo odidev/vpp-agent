@@ -3,8 +3,8 @@ set -eu
 
 # compile test
 pwd
-wget http://launchpadlibrarian.net/412288514/libc6-dev_2.29-0ubuntu1_arm64.deb
-sudo dpkg -i /home/travis/gopath/src/go.ligato.io/vpp-agent/v3/libc6-dev_2.29-0ubuntu1_arm64.deb
+wget https://ubuntu.pkgs.org/20.04/ubuntu-main-arm64/libc6_2.31-0ubuntu9_arm64.deb.html
+sudo dpkg -i /home/travis/gopath/src/go.ligato.io/vpp-agent/v3/libc6_2.31-0ubuntu9_arm64.deb.html
 sudo apt-get install -f
 ls /lib/aarch64-linux-gnu/
 go test -c ./tests/integration/vpp -o ./tests/integration/vpp/vpp-integration.test
