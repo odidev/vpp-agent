@@ -8,7 +8,6 @@ ls
 ls
 cd glibc-2.29
 ls
-sudo make
 sudo make install
 cd ..
 ls /lib/aarch64-linux-gnu/
