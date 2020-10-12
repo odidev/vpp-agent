@@ -6,9 +6,9 @@ wget https://ftp.gnu.org/gnu/glibc/glibc-2.29.tar.gz
 sudo tar -xzf glibc-2.29.tar.gz
 ls
 ls
-ls
-ls
 cd glibc-2.29
+ls
+ls
 sudo ./configure
 sudo make
 sudo make install
