@@ -3,7 +3,7 @@ set -eu
 # compile test
 pwd
 wget https://ftp.gnu.org/gnu/glibc/glibc-2.29.tar.gz
-sudo tar xzf glibc-2.29.tar.gz
+sudo tar -xzf glibc-2.29.tar.gz
 ls
 ls
 ls
