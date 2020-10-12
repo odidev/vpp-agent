@@ -8,6 +8,7 @@ cd glibc
 ./configure
 make
 make install
+cd ..
 ls /lib/aarch64-linux-gnu/
 go test -c ./tests/integration/vpp -o ./tests/integration/vpp/vpp-integration.test
 
