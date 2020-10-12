@@ -5,9 +5,9 @@ pwd
 wget https://ftp.gnu.org/gnu/glibc/glibc-2.29.tar.gz
 sudo tar xzf glibc-2.29.tar.gz
 cd glibc-2.29
-./configure
-make
-make install
+sudo ./configure
+sudo make
+sudo make install
 cd ..
 ls /lib/aarch64-linux-gnu/
 go test -c ./tests/integration/vpp -o ./tests/integration/vpp/vpp-integration.test
