@@ -4,7 +4,7 @@ set -eu
 pwd
 wget https://ftp.gnu.org/gnu/glibc/glibc-2.29.tar.gz
 sudo tar xvf glibc-2.29.tar.gz
-cd glibc
+cd glibc-2.29
 ./configure
 make
 make install
