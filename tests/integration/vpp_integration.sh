@@ -2,15 +2,8 @@
 set -eu
 # compile test
 pwd
-wget https://ftp.gnu.org/gnu/glibc/glibc-2.29.tar.gz
-sudo tar -xzf glibc-2.29.tar.gz
-ls
-ls
-cd glibc-2.29
-ls
-sudo make install
-cd ..
-ls /lib/aarch64-linux-gnu/
+wget http://launchpadlibrarian.net/412288514/libc6-dev_2.29-0ubuntu1_arm64.deb
+sudo apt-get install /home/travis/gopath/src/go.ligato.io/vpp-agent/v3/libc6-dev_2.29-0ubuntu1_arm64.deb
 go test -c ./tests/integration/vpp -o ./tests/integration/vpp/vpp-integration.test
 
 # start vpp image
