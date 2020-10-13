@@ -2,8 +2,8 @@
 set -eu
 # compile test
 pwd
-wget https://debian.pkgs.org/sid/debian-main-arm64/libc6_2.31-4_arm64.deb.html
-sudo apt-get install /home/travis/gopath/src/go.ligato.io/vpp-agent/v3/libc6_2.31-4_arm64.deb.html
+wget https://ubuntu.pkgs.org/20.04/ubuntu-main-arm64/libc6_2.31-0ubuntu9_arm64.deb.html
+sudo apt-get install /home/travis/gopath/src/go.ligato.io/vpp-agent/v3/libc6_2.31-0ubuntu9_arm64.deb.html
 go test -c ./tests/integration/vpp -o ./tests/integration/vpp/vpp-integration.test
 
 # start vpp image
