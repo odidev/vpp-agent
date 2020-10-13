@@ -81,7 +81,9 @@ jobs:
       script:
         - make verify-binapi
         - make integration-tests
-    - env: VPP_VERSION=1908
+    - env: 
+      - VPP_VERSION=1908
+      - LOCAL_GIT_DIRECTORY=/usr
       dist: focal
       sudo: required
       group: edge
