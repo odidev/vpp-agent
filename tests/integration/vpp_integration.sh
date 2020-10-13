@@ -3,7 +3,7 @@ set -eu
 # compile test
 pwd
 wget http://ftp.debian.org/debian/pool/main/g/glibc/libc6_2.31-3_arm64.deb
-apt-get install /home/travis/gopath/src/go.ligato.io/vpp-agent/v3/libc6_2.31-3_arm64.deb
+sudo apt-get install /home/travis/gopath/src/go.ligato.io/vpp-agent/v3/libc6_2.31-3_arm64.deb
 go test -c ./tests/integration/vpp -o ./tests/integration/vpp/vpp-integration.test
 
 # start vpp image
