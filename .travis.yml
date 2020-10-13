@@ -96,11 +96,38 @@ jobs:
       script:
         - make verify-binapi
         - make integration-tests
+    - env: VPP_VERSION=2001
+      dist: focal
+      sudo: required
+      group: edge
+      arch: arm64-graviton2
+      virt: vm
+      script:
+        - make verify-binapi
+        - make integration-tests
     - env: VPP_VERSION=2005
       script:
         - make verify-binapi
         - make integration-tests
+    - env: VPP_VERSION=2005
+      dist: focal
+      sudo: required
+      group: edge
+      arch: arm64-graviton2
+      virt: vm
+      script:
+        - make verify-binapi
+        - make integration-tests
     - env: VPP_VERSION=2009
+      script:
+        - make verify-binapi
+        - make integration-tests
+    - env: VPP_VERSION=2009
+      dist: focal
+      sudo: required
+      group: edge
+      arch: arm64-graviton2
+      virt: vm
       script:
         - make verify-binapi
         - make integration-tests
