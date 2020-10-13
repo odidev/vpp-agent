@@ -1,6 +1,7 @@
 #!/bin/bash
 set -eu
 # compile test
+cat /etc/os-release
 pwd
 #sudo wget http://ftp.debian.org/debian/pool/main/g/glibc/libc6_2.31-3_arm64.deb
 #sudo apt-get install /home/travis/gopath/src/go.ligato.io/vpp-agent/v3/libc6_2.31-3_arm64.deb
