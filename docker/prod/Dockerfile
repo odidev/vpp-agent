@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		# vpp requirements
 		ca-certificates \
 		libapr1 \
-		libc6==2.31 \
+		libc6 \
 		libmbedcrypto1 \
 		libmbedtls10 \
 		libmbedx509-0 \
