@@ -88,7 +88,6 @@ jobs:
       arch: arm64-graviton2
       virt: vm
       script:
-        - sudo apt-get purge libc6
         - make verify-binapi
         - make integration-tests
     - env: VPP_VERSION=2001
