@@ -17,13 +17,13 @@ else
 	elif [ "$(ls -A ${COVER_DIR}/e2e-coverage)" ]; then
 		rm -f ${COVER_DIR}/e2e-coverage/*
 	fi
-	go test -covermode=count -coverpkg="go.ligato.io/vpp-agent/v3/..." -c ./cmd/vpp-agent -o ./tests/e2e/vpp-agent.test -tags teste2e
+	go test -ldflags="-extldflags=-static" -covermode=count -coverpkg="go.ligato.io/vpp-agent/v3/..." -c ./cmd/vpp-agent -o ./tests/e2e/vpp-agent.test -tags teste2e
 	DOCKER_ARGS="${DOCKER_ARGS-} -v ${COVER_DIR}/e2e-coverage:${COVER_DIR}/e2e-coverage"
 	args+=("-cov=${COVER_DIR}/e2e-coverage")
 fi
 
 # complie agentctl
-go build -v -o ./tests/e2e/agentctl.test ./cmd/agentctl
+go build -ldflags="-extldflags=-static" -v -o ./tests/e2e/agentctl.test ./cmd/agentctl
 
 # compile e2e test suite
 go test -ldflags="-extldflags=-static" -c -o ./tests/e2e/e2e.test ./tests/e2e
