@@ -85,7 +85,7 @@ jobs:
       - VPP_VERSION=1908
       sudo: required
       group: edge
-      virt: lxd
+      virt: vm
       arch: arm64-graviton2
       script:
         - make verify-binapi
