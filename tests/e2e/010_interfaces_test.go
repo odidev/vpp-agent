@@ -11,7 +11,6 @@
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
-/*
 package e2e
 
 import (
@@ -290,8 +289,8 @@ func TestInterfaceTapTunnel(t *testing.T) {
 }
 
 // connect VPP with a microservice via AF-PACKET + VETH interfaces
-*/
-/*func TestInterfaceConnAfPacket(t *testing.T) {
+
+func TestInterfaceConnAfPacket(t *testing.T) {
 	ctx := setupE2E(t)
 	defer ctx.teardownE2E()
 
@@ -550,4 +549,4 @@ func TestInterfaceAfPacketWithLogicalReference(t *testing.T) {
 	Expect(ctx.pingFromMs(msName, afPacketIP)).To(Succeed())
 	Expect(ctx.agentInSync()).To(BeTrue())
 }
-*/
+
