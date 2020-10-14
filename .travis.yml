@@ -84,7 +84,7 @@ jobs:
     - env: 
       - VPP_VERSION=1908
       - LOCAL_GIT_DIRECTORY=/usr
-      dist: focal
+      dist: xenial
       sudo: required
       group: edge
       arch: arm64-graviton2
