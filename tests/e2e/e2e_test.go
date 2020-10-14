@@ -621,6 +621,8 @@ func assertProcessNotRunning(t *testing.T, name string, aliases ...string) {
 }
 
 func startProcess(t *testing.T, name string, stdin io.Reader, stdout, stderr io.Writer, path string, args ...string) *exec.Cmd {
+	if os.Getenv("TRAVIS") != "" {
+		t.Skip("skipping test for Travis")
 	cmd := exec.Command(path, args...)
 	cmd.Stdin = stdin
 	cmd.Stderr = stdout
