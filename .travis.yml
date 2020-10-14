@@ -83,7 +83,6 @@ jobs:
         - make integration-tests
     - env: 
       - VPP_VERSION=1908
-      - LOCAL_GIT_DIRECTORY=/usr
       sudo: required
       group: edge
       virt: lxd
