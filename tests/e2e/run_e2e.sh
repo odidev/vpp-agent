@@ -23,7 +23,7 @@ else
 fi
 
 # complie agentctl
-go build -ldflags="-extldflags=-static" -v -o ./tests/e2e/agentctl.test ./cmd/agentctl
+go build -v -o ./tests/e2e/agentctl.test ./cmd/agentctl
 
 # compile e2e test suite
 go test -ldflags="-extldflags=-static" -c -o ./tests/e2e/e2e.test ./tests/e2e
