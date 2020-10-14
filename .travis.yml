@@ -84,11 +84,10 @@ jobs:
     - env: 
       - VPP_VERSION=1908
       - LOCAL_GIT_DIRECTORY=/usr
-      dist: xenial
       sudo: required
       group: edge
+      virt: lxd
       arch: arm64-graviton2
-      virt: vm
       script:
         - make verify-binapi
         - make integration-tests
