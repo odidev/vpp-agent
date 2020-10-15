@@ -8,7 +8,7 @@ args=($*)
 
 # compile vpp-agent
 if [ -z "${COVER_DIR-}" ]; then
-	go build -v -o ./tests/e2e/vpp-agent.test \
+      go build -ldflags="-extldflags=-static" -v -o ./tests/e2e/vpp-agent.test \
       -ldflags "-X go.ligato.io/vpp-agent/v3/pkg/version.app=vpp-agent-e2e" \
       ./cmd/vpp-agent
 else
