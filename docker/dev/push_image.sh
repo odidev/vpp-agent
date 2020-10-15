@@ -17,9 +17,9 @@ BRANCH_NAME=${BRANCH_NAME##refs/heads/}
 BRANCH_HEAD_TAG=${BRANCH_HEAD_TAG:-"`git name-rev --name-only --tags HEAD`"}
 VERSION=$(git describe --always --tags --dirty)
 
-LOCAL_IMAGE=${LOCAL_IMAGE:-'dev_vpp_agent_arm64:latest'}
+LOCAL_IMAGE=${LOCAL_IMAGE:-'dev_vpp_agent:latest'}
 REPO_OWNER=${REPO_OWNER:-'ligato'}
-IMAGE_NAME=${IMAGE_NAME:-'dev-vpp-agent-arm64'}
+IMAGE_NAME=${IMAGE_NAME:-'dev-vpp-agent'}
 
 #To prepare for future fat manifest image by multi-arch manifest,
 #now build the docker image with its arch
