@@ -27,6 +27,9 @@ import (
 
 // connect VPP with a microservice via TAP interface
 func TestInterfaceConnTap(t *testing.T) {
+	if os.Getenv("TRAVIS") != "" {
+		t.Skip("skipping test for Travis")
+	}
 	ctx := setupE2E(t)
 	defer ctx.teardownE2E()
 
