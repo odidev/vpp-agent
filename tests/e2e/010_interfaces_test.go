@@ -16,6 +16,7 @@ package e2e
 import (
 	"context"
 	"testing"
+	"os"
 
 	. "github.com/onsi/gomega"
 
